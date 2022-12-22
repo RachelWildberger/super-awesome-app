@@ -9,7 +9,7 @@ var liquorType = ["whisky", "vodka", "rum", "tequila", "gin", "brandy"];
 
 var displayCocktailData = function (data) {
 
-    var theCocktailUrl = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?i=' ;
+    var theCocktailUrl = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?i=';
 
     fetch(theCocktailUrl)
         .then(function (response) {
@@ -43,7 +43,6 @@ var getCocktail = function (liquorType) {
 
 var getRandom = function (data) {
 
-    // var liquorType = "rum";
     var theRandomUrl = `https://www.thecocktaildb.com/api/json/v1/1/random.php`;
 
     fetch(theRandomUrl)
@@ -55,29 +54,37 @@ var getRandom = function (data) {
         })
         .catch(function (error) {
             alert('Unable to connect to Cocktail API');
-          });
+        });
 };
 ;
 
- var displayRandom = function(data) {
+    var ingredientsList = ["strIngredient1", "strIngredient2", "strIngredient3", "strIngredient4", "strIngredient5", 
+    "strIngredient6", "strIngredient7", "strIngredient8", "strIngredient9", "strIngredient10", "strIngredient11", 
+    "strIngredient12", "strIngredient13", "strIngredient14", "strIngredient15"];
+
+var displayRandom = function (data) {
 
     var cocktailNameEl = document.getElementById("cocktail-name");
-    var ingredientsEl = document.getElementById("ingredients");
     var instructionsEl = document.getElementById("instructions");
     var imageEl = document.getElementById("image");
+    var ingredientsEl = document.getElementById("ingredients");
+
+
 
     var name = data.drinks[0].strDrink;
-    var ingredients = data.drinks[0].strIngredient1;
+    var ingredients = data.drinks[0].ingredientsList;
     var instructions = data.drinks[0].strInstructions;
     var image = data.drinks[0].strDrinkThumb;
 
 
     cocktailNameEl.textContent = `${name}`;
-    ingredientsEl.textContent = `${ingredients}`;
-    instructionsEl.textContent = `${instructions}`;
+    ingredientsEl.textContent = `Ingredients: ${ingredients}`;
+    instructionsEl.textContent = `Instructions: ${instructions}`;
     imageEl.textContent = `${image}`;
 
     console.log("Random drink!", data);
-    
+
 }
-    
+
+
+
