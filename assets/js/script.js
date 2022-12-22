@@ -1,31 +1,15 @@
 var shuffleBtnEl = document.querySelector("#shuffle-btn");
 var chooseBtnEl = document.querySelector("#choose-btn");
 var recipeCardEl = document.querySelector("#recipe-card");
-var apiKey = 1;
+var liquorOptionsEl = document.querySelector("#liquor-options");
+var formEl = document.getElementById("drink-form");
+var recipeDisplay = document.getElementById("recipe-container");
+var liquorType = ["whisky", "vodka", "rum", "tequila", "gin", "brandy" ];
 
-
-// // function userDropdown() {
-// //     var liquorOption = document.getElementById("liquor-options").value;
-// //     document.getElementById("demo").innerHTML = liquorOption;
-// // }
-
-// var buttonClickHandler = function (event) {
-//     // What is `event.target` referencing?
-//     // TODO: Write your answer here
-//     var liquor = event.target.getAttribute("choose-btn");
-
-//     // Why is this `if` block in place?
-//     // TODO: Write your answer here
-//     if (liquor) {
-//         getUserChoice(liquor);
-
-//         repoContainerEl.value = '';
-//     }
-// };
 
 var displayCocktailData = function (data) {
 
-    var theCocktailUrl = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?i=' + apiKey;
+    var theCocktailUrl = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?i=' ;
 
     fetch(theCocktailUrl)
         .then(function (response) {
@@ -44,7 +28,8 @@ var displayCocktailData = function (data) {
 
 var getCocktail = function (liquorType) {
 
-    var theCocktailUrl = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?i=' + liquorType + apiKey;
+    // var liquorType = "rum";
+    var theCocktailUrl = `https://www.thecocktaildb.com/api/json/v1/1/search.php?i=${liquorType}`;
 
     fetch(theCocktailUrl)
         .then(function (response) {
@@ -56,16 +41,3 @@ var getCocktail = function (liquorType) {
 };
 ;
 
-
-//   var userOptionsEl= document.getElementById("liquor-options");
-
-//   var displayCocktails = function (cocktail, searchTerm) {
-
-//     recipeCardEl.value = "No drinks found.";
-//     if (select.whisky === "SELECT") {
-//       console.log("whisky has been selected");
-//       } else {
-//         console.log("liquor has not been selected");
-//       }
-//       return;
-//     }
