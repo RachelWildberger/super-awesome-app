@@ -1,15 +1,14 @@
-var shuffleBtnEl = document.querySelector("#shuffle-btn");
+var shuffleBtnEl = document.getElementById("shuffle-btn");
 var chooseBtnEl = document.querySelector("#choose-btn");
 var recipeCardEl = document.querySelector("#recipe-card");
 var liquorOptionsEl = document.querySelector("#liquor-options");
 var formEl = document.getElementById("drink-form");
 var recipeDisplay = document.getElementById("recipe-container");
 var liquorType = ["whisky", "vodka", "rum", "tequila", "gin", "brandy"];
-var button = document.getElementById('#shuffle_btn');
 
 var displayCocktailData = function (data) {
 
-    var theCocktailUrl = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?i=' ;
+    var theCocktailUrl = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?i=';
 
     fetch(theCocktailUrl)
         .then(function (response) {
@@ -39,11 +38,9 @@ var getCocktail = function (liquorType) {
             console.log(data);
         });
 };
-;
 
 var getRandom = function (data) {
 
-    // var liquorType = "rum";
     var theRandomUrl = `https://www.thecocktaildb.com/api/json/v1/1/random.php`;
 
     fetch(theRandomUrl)
@@ -55,35 +52,74 @@ var getRandom = function (data) {
         })
         .catch(function (error) {
             alert('Unable to connect to Cocktail API');
-          });
+        });
 };
-;
 
+var displayRandom = function (data) {
 
- var displayRandom = function(data) {
+    // var imageURL = `https://www.thecocktaildb.com/images/media/drink/${image}.jpg`
 
-    document.getElementById("demo").innerHTML = recipeCardEl();
+    // var ingredientsList = ["strIngredient1", "strIngredient2", "strIngredient3", "strIngredient4", "strIngredient5",
+    //     "strIngredient6", "strIngredient7", "strIngredient8", "strIngredient9", "strIngredient10", "strIngredient11",
+    //     "strIngredient12", "strIngredient13", "strIngredient14", "strIngredient15"];
 
-    var cocktailNameEl = document.getElementById("cocktail-name");
     var ingredientsEl = document.getElementById("ingredients");
-    var instructionsEl = document.getElementById("instructions");
-    var imageEl = document.getElementById("image");
+    // for (var i = 0; i < ingredientsList.length; i++) {
+    //     console.log(ingredientsList[i]);
 
-    var name = data.drinks[0].strDrink;
-    var ingredients = data.drinks[0].strIngredient1;
-    var instructions = data.drinks[0].strInstructions;
-    var image = data.drinks[0].strDrinkThumb;
+        var cocktailNameEl = document.getElementById("cocktail-name");
+        var instructionsEl = document.getElementById("instructions");
+        // var imageEl = document.getElementById("image");
 
+        var name = data.drinks[0].strDrink;
+        var ingredients = data.drinks[0].strIngredient1;
+        var instructions = data.drinks[0].strInstructions;
+        // var image = data.drinks[0].strDrinkThumb;
 
-    cocktailNameEl.textContent = `${name}`;
-    ingredientsEl.textContent = `${ingredients}`;
-    instructionsEl.textContent = `${instructions}`;
-    imageEl.textContent = `${image}`;
+        cocktailNameEl.textContent = `${name}`;
+        ingredientsEl.textContent = `Ingredients: ${ingredients}`;
+        instructionsEl.textContent = `Instructions: ${instructions}`;
+        // imageEl.textContent = '${image}';
+    // }
 
     console.log("Random drink!", data);
-    
-}
-getRandom();
 
-var button = document.querySelector("#shuffle_btn");
-button.addEventListener("click", getRandom);
+}
+
+// function clickBtn(event){
+//     console.log('hello');
+// }
+
+shuffleBtnEl.addEventListener("click", getRandom);
+console.log(shuffleBtnEl);
+//getRandom();
+
+
+// var recipeIngredients = Obj.entries(recipes);
+// var ingredients = [];
+
+//  for (var i = 0; i < recipeIngredients.length; i++) {
+//    if(recipeIngredients[i][0].includes('ing')) {
+//         ingredients.push(recipeIndredients[i][1])
+//    }
+//  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
