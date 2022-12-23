@@ -5,7 +5,7 @@ var liquorOptionsEl = document.querySelector("#liquor-options");
 var formEl = document.getElementById("drink-form");
 var recipeDisplay = document.getElementById("recipe-container");
 var liquorType = ["whisky", "vodka", "rum", "tequila", "gin", "brandy"];
-
+var button = document.getElementById('#shuffle_btn');
 
 var displayCocktailData = function (data) {
 
@@ -59,7 +59,10 @@ var getRandom = function (data) {
 };
 ;
 
+
  var displayRandom = function(data) {
+
+    document.getElementById("demo").innerHTML = recipeCardEl();
 
     var cocktailNameEl = document.getElementById("cocktail-name");
     var ingredientsEl = document.getElementById("ingredients");
@@ -80,4 +83,7 @@ var getRandom = function (data) {
     console.log("Random drink!", data);
     
 }
-    
+getRandom();
+
+var button = document.querySelector("#shuffle_btn");
+button.addEventListener("click", getRandom);
