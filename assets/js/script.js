@@ -1,15 +1,16 @@
-var shuffleBtnEl = document.querySelector("#shuffle-btn");
+var shuffleBtnEl = document.getElementById("shuffle-btn");
 var chooseBtnEl = document.querySelector("#choose-btn");
 var recipeCardEl = document.querySelector("#recipe-card");
 var liquorOptionsEl = document.querySelector("#liquor-options");
 var formEl = document.getElementById("drink-form");
 var recipeDisplay = document.getElementById("recipe-container");
 var liquorType = ["whisky", "vodka", "rum", "tequila", "gin", "brandy"];
-var button = document.getElementById('#shuffle_btn');
 
 var displayCocktailData = function (data) {
 
+
     var theCocktailUrl = 'www.thecocktaildb.com/api/json/v1/1/filter.php?i=';
+
 
     fetch(theCocktailUrl)
         .then(function (response) {
@@ -51,9 +52,11 @@ var getRandom = function (data) {
         .then(function (data) {
             displayRandom(data);
         })
-        // .catch(function (error) {
-        //     alert('Unable to connect to Cocktail API');
-        // });
+
+        .catch(function (error) {
+            alert('Unable to connect to Cocktail API');
+        });
+
 };
 
 
@@ -88,4 +91,13 @@ var displayRandom = function (data) {
     console.log( data);
 
 }
+
+
+// function clickBtn(event){
+//     console.log('hello');
+// }
+
+shuffleBtnEl.addEventListener("click", getRandom);
+console.log(shuffleBtnEl);
+//getRandom();
 
