@@ -94,8 +94,6 @@ var displayCocktail = function (data) {
     
     console.log( data);
 
-};
-
 
 //Get data from cocktail API
 var getCocktail = function (data) {
