@@ -1,6 +1,7 @@
 var shuffleBtnEl = document.getElementById("shuffle-btn");
-var chooseBtnEl = document.querySelector("#choose-btn");
+var chooseBtnEl = document.getElementById("choose-btn");
 var recipeCardEl = document.querySelector("#recipe-card");
+var newCocktailBtnEl = document.getElementById("new-cocktail");
 var liquorOptionsEl = document.querySelector("#liquor-options");
 var formEl = document.getElementById("drink-form");
 var recipeDisplay = document.getElementById("recipe-container");
@@ -91,13 +92,11 @@ var displayRandom = function (data) {
     console.log( data);
 
 }
-
-
-// function clickBtn(event){
-//     console.log('hello');
-// }
+chooseBtnEl.addEventListener("click", getCocktail);
+console.log(chooseBtnEl);
 
 shuffleBtnEl.addEventListener("click", getRandom);
 console.log(shuffleBtnEl);
-//getRandom();
 
+newCocktailBtnEl.addEventListener("click", getCocktail);
+console.log(newCocktailBtnEl);
