@@ -1,7 +1,8 @@
-var shuffleBtnEl = document.getElementById("shuffle-btn");
-var chooseBtnEl = document.getElementById("choose-btn");
+var cocktailBtnEl = document.getElementById("drink-btn");
+var mealBtnEl = document.getElementById("meal-btn");
 var recipeCardEl = document.querySelector("#recipe-card");
 var newCocktailBtnEl = document.getElementById("new-cocktail");
+var newMealBtnEl = document.getElementById("new-meal");
 var liquorOptionsEl = document.querySelector("#liquor-options");
 var formEl = document.getElementById("drink-form");
 var recipeDisplay = document.getElementById("recipe-container");
@@ -32,37 +33,37 @@ var getMeal = function (data) {
 //data is coming from & changing names of var's & ID tags(we will need to create these in HTML if the 
 //teammates have not done this yet this can now resemble the recipe card we have) 
 //
-// var displayMeal = function (data) {
+ var displayMeal = function (data) {
 
-//     var recipe = data.drinks[0];
+    var mealRecipe = data.meals[0];
 
-//     var recipeIngredients = Object.entries(recipe);
-//     var ingredients = [];
+     var mealIngredients = Object.entries(mealRecipe);
+     var foodIngredients = [];
 
-//     for (var i = 0; i < recipeIngredients.length; i++) {
-//         if (recipeIngredients[i][0].includes("strIngredient") && recipeIngredients[i][1]) {
-//             ingredients.push(recipeIngredients[i][1])
-//         }
-//     }
+     for (var i = 0; i < mealIngredients.length; i++) {
+         if (mealIngredients[i][0].includes("strmealIngredient") && mealIngredients[i][1]) {
+             ingredients.push(mealIngredients[i][1])
+         }
+     }
     
 
-//     var ingredientsEl = document.getElementById("ingredients");
-//     var cocktailNameEl = document.getElementById("cocktail-name");
-//     var instructionsEl = document.getElementById("instructions");
-//     // var imageEl = document.getElementById("image");
+     var mealIngredientsEl = document.getElementById("meal-ingredients");
+     var mealNameEl = document.getElementById("meal-name");
+     var cookingInstructionsEl = document.getElementById("cooking-instructions");
+    // var imageEl = document.getElementById("image");
 
-//     var name = data.drinks[0].strDrink;
-//     var instructions = data.drinks[0].strInstructions;
-//     // var image = data.drinks[0].strDrinkThumb;
+     var mealName = data.meals[0].strMeal;
+     var cookingInstructions = data.meals[0].strCookingInstructions;
+          // var image = data.drinks[0].strDrinkThumb;
 
-//     cocktailNameEl.textContent = `${name}`;
-//     ingredientsEl.textContent = `Ingredients: ${ingredients}`;
-//     instructionsEl.textContent = `Instructions: ${instructions}`;
-//     // imageEl.innerHTML = `${image}`;
+     mealNameEl.textContent = `${mealName}`;
+     mealIngredientsEl.textContent = `Ingredients: ${mealIngredients}`;
+     cookingInstructionsEl.textContent = `Instructions: ${cookingInstructions}`;
+     // imageEl.innerHTML = `${image}`;
     
-//     console.log( data);
+     console.log( data);
 
-// }
+ }
 
 //Display the cocktail information 
 var displayCocktail = function (data) {
@@ -94,7 +95,7 @@ var displayCocktail = function (data) {
     
     console.log( data);
 
-
+}
 //Get data from cocktail API
 var getCocktail = function (data) {
 
@@ -115,12 +116,14 @@ var getCocktail = function (data) {
 };
 
 
-// chooseBtnEl.addEventListener("click", getCocktail);
-// console.log(chooseBtnEl);
+ mealBtnEl.addEventListener("click", getMeal);
+// console.log(mealBtnEl);
 
-shuffleBtnEl.addEventListener("click", getCocktail);
-// console.log(shuffleBtnEl);
+ cocktailBtnEl.addEventListener("click", getCocktail);
+// console.log(cocktailBtnEl);
 
 // newCocktailBtnEl.addEventListener("click", getCocktail);
 // console.log(newCocktailBtnEl);
 
+// newMealBntE1.addEventListener("click", getMeal);
+// console.log(newMealBntE1);

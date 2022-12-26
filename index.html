@@ -26,7 +26,7 @@
               <h1 class="title is-4">How it works:</h1>
               <p class="description">Click shuffle for a surprise cocktail or pick your liquor and select choose cocktail for a drink made with your preferred liquor.</p>
               <br />
-              <form id="drink-form">
+            <!--  <form id="drink-form">
                 <div class="field"> 
                   <label class="label">Select liquor:</label>
                   <div class="control">
@@ -42,11 +42,11 @@
                       </select>
                     </div>
                   </div>
-                </div>
+                </div>-->
 
-                <button type="button" id="choose-btn" class="button is-block is-primary is-fullwidth is-medium">Choose cocktail</button>
+                <button type="button" id="meal-btn" class="button is-block is-primary is-fullwidth is-medium">Shuffle meals</button>
                 <br />        
-                <button type="button" id="shuffle-btn" class="button is-block is-primary is-fullwidth is-medium">Shuffle cocktails</button>
+                <button type="button" id="drink-btn" class="button is-block is-primary is-fullwidth is-medium">Shuffle cocktails</button>
                 <br />
                 <small><em>Must be 21 and older to play cocktail roulette.</em></small>
               </form>
@@ -58,6 +58,24 @@
         </div>
       </div>
     </section>
+<!--Meal recipe card section-->
+    <section class="container">
+      <div class="columns is-multiline">
+        <div class="column is-8 is-offset-2 register">
+          <div class="columns">
+            <div class="column is-5">
+              <figure class="image is-4by3">
+                  <img src="" id="image" alt="--Meal Image">
+              </figure>
+          </div>
+            <div id="meal-recipe-card" class="column right">
+              <h1 id="meal-name" class="title is-4"></h1>
+              <p id="meal-ingredients" class="hidden"></p>
+              <br />
+              <p id="cooking-instructions" class="hidden"></p>
+              <br />
+              <button type="button" id="new-meal" class="button is-block is-primary is-fullwidth is-medium">New meal</button>
+              <br />
 
  <!-- Cocktail recipe card section    -->
     <section class="container">
