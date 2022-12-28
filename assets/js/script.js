@@ -17,8 +17,7 @@ var getMeal = function (data) {
             return response.json();
         })
         .then(function (data) {
-            // displayMeal(data);
-            console.log(data);
+            displayMeal(data);
         })
 
         .catch(function (error) {
@@ -29,39 +28,35 @@ var getMeal = function (data) {
 
 //Display the meal information 
 
-//*Hollie this is the block I need you to work on; using the meal API above to define where the 
-//data is coming from & changing names of var's & ID tags(we will need to create these in HTML if the 
-//teammates have not done this yet this can now resemble the recipe card we have) 
-//
  var displayMeal = function (data) {
 
     var mealRecipe = data.meals[0];
 
      var mealIngredients = Object.entries(mealRecipe);
-     var foodIngredients = [];
+     var ingredients = [];
 
      for (var i = 0; i < mealIngredients.length; i++) {
-         if (mealIngredients[i][0].includes("strmealIngredient") && mealIngredients[i][1]) {
+         if (mealIngredients[i][0].includes("strIngredient") && mealIngredients[i][1]) {
              ingredients.push(mealIngredients[i][1])
          }
      }
     
 
-     var mealIngredientsEl = document.getElementById("meal-ingredients");
+     var ingredientsEl = document.getElementById("meal-ingredients");
      var mealNameEl = document.getElementById("meal-name");
      var cookingInstructionsEl = document.getElementById("cooking-instructions");
-    // var imageEl = document.getElementById("image");
+    // var mealImageEl = document.getElementById("image");
 
      var mealName = data.meals[0].strMeal;
-     var cookingInstructions = data.meals[0].strCookingInstructions;
-          // var image = data.drinks[0].strDrinkThumb;
+     var cookingInstructions = data.meals[0].strInstructions;
+     // var mealImage = data.meals[0].strMealThumb;
 
      mealNameEl.textContent = `${mealName}`;
-     mealIngredientsEl.textContent = `Ingredients: ${mealIngredients}`;
-     cookingInstructionsEl.textContent = `Instructions: ${cookingInstructions}`;
-     // imageEl.innerHTML = `${image}`;
+     ingredientsEl.textContent = `Ingredients: ${ingredients}`;
+     cookingInstructionsEl.textContent = `Cooking Instructions: ${cookingInstructions}`;
+     // mealImageEl.innerHTML = `${mealImage}`;
     
-     console.log( data);
+     console.log(data);
 
  }
 
@@ -122,8 +117,8 @@ var getCocktail = function (data) {
  cocktailBtnEl.addEventListener("click", getCocktail);
 // console.log(cocktailBtnEl);
 
-// newCocktailBtnEl.addEventListener("click", getCocktail);
+newCocktailBtnEl.addEventListener("click", getCocktail);
 // console.log(newCocktailBtnEl);
 
-// newMealBntE1.addEventListener("click", getMeal);
+newMealBtnEl.addEventListener("click", getMeal);
 // console.log(newMealBntE1);
