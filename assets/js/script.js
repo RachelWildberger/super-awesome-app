@@ -27,38 +27,36 @@ var getMeal = function (data) {
 };
 
 //Display the meal information 
-
- var displayMeal = function (data) {
+var displayMeal = function (data) {
 
     var mealRecipe = data.meals[0];
 
-     var mealIngredients = Object.entries(mealRecipe);
-     var ingredients = [];
+    var mealIngredients = Object.entries(mealRecipe);
+    var ingredients = [];
 
-     for (var i = 0; i < mealIngredients.length; i++) {
-         if (mealIngredients[i][0].includes("strIngredient") && mealIngredients[i][1]) {
-             ingredients.push(mealIngredients[i][1])
-         }
-     }
-    
+    for (var i = 0; i < mealIngredients.length; i++) {
+        if (mealIngredients[i][0].includes("strIngredient") && mealIngredients[i][1]) {
+            ingredients.push(mealIngredients[i][1])
+        }
+    }
 
-     var ingredientsEl = document.getElementById("meal-ingredients");
-     var mealNameEl = document.getElementById("meal-name");
-     var cookingInstructionsEl = document.getElementById("cooking-instructions");
-    // var mealImageEl = document.getElementById("image");
 
-     var mealName = data.meals[0].strMeal;
-     var cookingInstructions = data.meals[0].strInstructions;
-     // var mealImage = data.meals[0].strMealThumb;
+    var ingredientsEl = document.getElementById("meal-ingredients");
+    var mealNameEl = document.getElementById("meal-name");
+    var cookingInstructionsEl = document.getElementById("cooking-instructions");
+    var mealImageEl = document.getElementById("meal-image");
+    mealImageEl.src = data.meals[0].strMealThumb;
 
-     mealNameEl.textContent = `${mealName}`;
-     ingredientsEl.textContent = `Ingredients: ${ingredients}`;
-     cookingInstructionsEl.textContent = `Cooking Instructions: ${cookingInstructions}`;
-     // mealImageEl.innerHTML = `${mealImage}`;
-    
-     console.log(data);
+    var mealName = data.meals[0].strMeal;
+    var cookingInstructions = data.meals[0].strInstructions;
 
- }
+    mealNameEl.textContent = `${mealName}`;
+    ingredientsEl.textContent = `Ingredients: ${ingredients}`;
+    cookingInstructionsEl.textContent = `Cooking Instructions: ${cookingInstructions}`;
+
+    console.log(data);
+
+}
 
 //Display the cocktail information 
 var displayCocktail = function (data) {
@@ -73,24 +71,26 @@ var displayCocktail = function (data) {
             ingredients.push(recipeIngredients[i][1])
         }
     }
-    
+
     var ingredientsEl = document.getElementById("ingredients");
     var cocktailNameEl = document.getElementById("cocktail-name");
     var instructionsEl = document.getElementById("instructions");
-    // var imageEl = document.getElementById("image");
+    var imageEl = document.getElementById("image");
+    imageEl.src = data.drinks[0].strDrinkThumb;
+    
 
     var name = data.drinks[0].strDrink;
     var instructions = data.drinks[0].strInstructions;
-    // var image = data.drinks[0].strDrinkThumb;
 
     cocktailNameEl.textContent = `${name}`;
     ingredientsEl.textContent = `Ingredients: ${ingredients}`;
     instructionsEl.textContent = `Instructions: ${instructions}`;
-    // imageEl.innerHTML = `${image}`;
-    
-    console.log( data);
+
+
+    console.log(data);
 
 }
+
 //Get data from cocktail API
 var getCocktail = function (data) {
 
@@ -111,10 +111,10 @@ var getCocktail = function (data) {
 };
 
 
- mealBtnEl.addEventListener("click", getMeal);
+mealBtnEl.addEventListener("click", getMeal);
 // console.log(mealBtnEl);
 
- cocktailBtnEl.addEventListener("click", getCocktail);
+cocktailBtnEl.addEventListener("click", getCocktail);
 // console.log(cocktailBtnEl);
 
 newCocktailBtnEl.addEventListener("click", getCocktail);
@@ -122,3 +122,4 @@ newCocktailBtnEl.addEventListener("click", getCocktail);
 
 newMealBtnEl.addEventListener("click", getMeal);
 // console.log(newMealBntE1);
+
