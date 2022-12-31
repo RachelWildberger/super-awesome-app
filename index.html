@@ -13,6 +13,7 @@
   background-size:cover; 
   background-position:center; 
   height:800px; ">
+  
 
 <!-- Intro & selection section    -->
     <section class="container">
@@ -30,24 +31,26 @@
               <h1 class="title is-4">How it works:</h1>
               <p class="description">Click shuffle for a surprise drink and meal recipe!</p> 
   
-<!--  <form id="drink-form">
+ <form id="drink-form">
                 <div class="field"> 
                   <label class="label">Select liquor:</label>
                   <div class="control">
                     <div id="liquor-options" class="select is-fullwidth">
-                      <select>
+                      <select id = "drop-down">
                         <option value="">--Choose an option--</option>
-                        <option value="option-whisky">Whisky</option>
-                        <option value="option-vodka">Vodka</option>
-                        <option value="option-rum">Rum</option>
-                        <option value="option-tequila">Tequila</option>
-                        <option value="option-gin">Gin</option>
-                        <option value="option-brandy">Brandy</option>
+                        <option value="whisky">Whisky</option>
+                        <option value="vodka">Vodka</option>
+                        <option value="rum">Rum</option>
+                        <option value="tequila">Tequila</option>
+                        <option value="gin">Gin</option>
+                        <option value="brandy">Brandy</option>
                       </select>
                     </div>
                   </div>
-                </div>-->
+                </div>
 
+                <button type="button" id="choose-btn" class="button is-block is-primary is-fullwidth is-medium">Choose Drink</button>
+                <br />                 
                 <button type="button" id="drink-btn" class="button is-block is-primary is-fullwidth is-medium">Shuffle Drinks</button>
                 <br />        
                 <button type="button" id="meal-btn" class="button is-block is-primary is-fullwidth is-medium">Shuffle Meals</button>
@@ -74,7 +77,7 @@
           </figure>
       </div>
         <div id="recipe-card" class="column right">
-          <h3 class="heading post-category">Drink Ideas</h3>
+          <h3 class="heading post-category">Drink Options</h3>
           <h1 id="cocktail-name" class="title is-4"></h1>
           <p id="ingredients" class=""></p>
           <br />
@@ -99,7 +102,7 @@
           </figure>
       </div>
         <div id="meal-recipe-card" class="column right is-inline-block">
-          <h3 class="heading post-category">Meal Ideas</h3>
+          <h3 class="heading post-category">Meal Options</h3>
           <h1 id="meal-name" class="title is-4"></h1>
           <p id="meal-ingredients" class="hidden"></p>
           <br />
