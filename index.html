@@ -7,35 +7,33 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
   </head>
+  <body>
 
-  <body class ="has-background-image is-background-fixed" 
-  Style="background-image: url('images/cocktail\ 2.jpeg'); 
-  background-size:cover; 
-  background-position:center; 
-  height:800px; ">
-  
+  <!--Background link-->
+  <style>
+    body {
+      background-image: url(https://kastinaandco.com/wp-content/uploads/2019/02/how-to-figure-out-food-costs-for-a-simple-event.jpg);
+    }
+  </style>
 
+  </style>
 <!-- Intro & selection section    -->
-    <section class="container">
+    <section class="main">
       <div class="columns is-multiline">
         <div class="column is-8 is-offset-2 register">
           <div class="columns">
             <div class="column left">
-              <h1 class="title is-1">Dinner and <br> a drink!</h1>
-              <h2 class="subtitle colored is-4">Welcome to dinner and a drink!</h2>
-              <p>Have a date and don't know what to make?</p>
-              <br />  
-              <p>Sick of the same old recipes?</p>            
-            </div>
+              <h1 class="title" >DINNER AND DRINKS</h1>
+              <h2 class= "titleA" >A RANDOM COCKTAIL AND FOOD GENERATOR</h2>
             <div class="column right has-text-centered">
-              <h1 class="title is-4">How it works:</h1>
-              <p class="description">Click shuffle for a surprise drink and meal recipe!</p> 
-  
- <form id="drink-form">
+              <h3 class="title is-4" style="color:black">How it works:</h3>
+              <p class="description" style="color:rgba(14, 14, 14, 0.61)">Click shuffle for a surprise drink and meal recipe!</p> 
+              
+            <form id="drink-form">
                 <div class="field"> 
                   <label class="label">Select liquor:</label>
                   <div class="control">
-                    <div id="liquor-options" class="select is-fullwidth">
+                    <div id="liquor-options" class="select">
                       <select id = "drop-down">
                         <option value="">--Choose an option--</option>
                         <option value="whisky">Whisky</option>
@@ -48,14 +46,19 @@
                     </div>
                   </div>
                 </div>
+            
+                </div>
 
-                <button type="button" id="choose-btn" class="button is-block is-primary is-fullwidth is-medium">Choose Drink</button>
-                <br />                 
-                <button type="button" id="drink-btn" class="button is-block is-primary is-fullwidth is-medium">Shuffle Drinks</button>
-                <br />        
-                <button type="button" id="meal-btn" class="button is-block is-primary is-fullwidth is-medium">Shuffle Meals</button>
+
+                <br>
+                <button type="button" style="width:20%"
+                id="choose-btn" class="button">Choose Drink</button>
                 <br />
-                <small><em>Must be 21 and older to consume alcohol.</em></small>
+                <button type="button" style="width:20%" id="drink-btn" class="button">Shuffle Drinks</button>
+                <br />        
+                <button type="button" style="width:20%" id="meal-btn" class="button">Shuffle Meals</button>
+                <br />
+                <small><b>Must be 21 and older to consume alcohol.</b></small>
               </form>
             </div>
           </div>
@@ -67,25 +70,25 @@
     </section>
 
 <!-- Cocktail recipe card section    -->
-<section class="container">
+
+<section class="child">
   <div class="columns is-multiline">
     <div class="column is-8 is-offset-2 register">
       <div class="columns">
-        <div class="column is-5">
+        <div class="column is-7">
           <figure class="image is-4by4">
               <img src="" id="image" alt="">
           </figure>
       </div>
-        <div id="recipe-card" class="column right">
-          <h3 class="heading post-category">Drink Options</h3>
-          <h1 id="cocktail-name" class="title is-4"></h1>
-          <p id="ingredients" class=""></p>
+        <div id="recipe-card" class="column left">
+          <h4 class="heading post-category" style="color:white">Drink Ideas</h4>
+          <h5 id="cocktail-name" class="title is-3"></h5>
+          <p id="ingredients" class="in"></p>
           <br />
-          <p id="instructions" class=""></p>
+          <p id="instructions" class="in"></p>
           <br />
-          <button type="button" id="new-cocktail" class="button is-block is-primary is-fullwidth is-medium">New cocktail</button>
+          <button class="btn" id="new-cocktail" class="button is-block is-primary is-fullwidth is-medium">New cocktail</button>
           <br />
-          <small><em>Must be 21 and older to consume alcohol.</em></small>
 
         </div>
       </div>
@@ -93,34 +96,36 @@
   </div>
 
   <!-- Meal recipe card section    -->
-  <div class="columns is-multiline">
-    <div class="column is-8 is-offset-2 register">
+
+  <section class="container">
+    <div class="columns is-multiline"></div>
+    <div class="column is-8 is-offset-3 register">
       <div class="columns">
         <div class="column is-5">
           <figure class="image is-4by4">
               <img src="" id="meal-image" alt="">
           </figure>
       </div>
-        <div id="meal-recipe-card" class="column right is-inline-block">
-          <h3 class="heading post-category">Meal Options</h3>
-          <h1 id="meal-name" class="title is-4"></h1>
+        <div id="meal-recipe-card" class="column left">
+          <h6 class="heading post-category" style="color:white">Meal Ideas</h6>
+          <h7 id="meal-name" class="title is-5"></h7>
           <p id="meal-ingredients" class="hidden"></p>
           <br />
           <p id="cooking-instructions" class="hidden"></p>
           <br />
-          <button type="button" id="new-meal" class="button is-block is-primary is-fullwidth is-medium">New Meal</button>
+          <button class="btn" id="new-meal" class="button is-block is-primary is-fullwidth is-medium">New Meal</button>
           <br />
           <small><em></em></small>
 
         </div>
       </div>
     </div>
-  </div>
+  </section>
   
 
 <!-- // Footer section -->
   <div class="hero-foot">
-    <div class="container">
+    <div class="containera">
         <div class="tabs is-centered">
             <ul>
                 <li><a>Project 1 by: the HTMLs</a></li>
