@@ -1,10 +1,10 @@
 var cocktailBtnEl = document.getElementById("drink-btn");
 var chooseBtnEl = document.getElementById("choose-btn");
 var mealBtnEl = document.getElementById("meal-btn");
-var recipeCardEl = document.querySelector("#recipe-card");
+var recipeCardEl = document.getElementById("recipe-card");
 var newCocktailBtnEl = document.getElementById("new-cocktail");
 var newMealBtnEl = document.getElementById("new-meal");
-var liquorOptionsEl = document.querySelector("#liquor-options");
+var liquorOptionsEl = document.getElementById("liquor-options");
 var formEl = document.getElementById("drink-form");
 var recipeDisplay = document.getElementById("recipe-container");
 
@@ -17,14 +17,14 @@ var getChooseCocktail = function () {
     console.log(liquorType);
     fetch(theCocktailUrl)
     .then(function (response){
-        return response.json()
+        return response.json();
     })
     .then(function (response){
         // console.log(response.drinks[0])
         return fetch("https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=" + response.drinks[0].idDrink)
     })
     .then(function (response){
-        return response.json()
+        return response.json();
     })
         .then(function (data) {
 
@@ -57,6 +57,7 @@ var chooseCocktail = function (liquorType) {
 var getMeal = function (data) {
 
     var theMealUrl = `https://www.themealdb.com/api/json/v1/1/random.php`;
+    localStorage.setItem('links', JSON.stringify(theMealUrl));
 
     fetch(theMealUrl)
         .then(function (response) {
@@ -186,3 +187,49 @@ newMealBtnEl.addEventListener("click", getMeal);
 
 chooseBtnEl.addEventListener("click", getChooseCocktail);
 // console.log(chooseBtnEl);
+
+
+ function renderLastChoice() {
+     var drinkRecipe = localStorage.getItem("recipe-card");
+     var foodRecipe = localStorage.getItem("meal-recipe-card");
+  
+     if (!drinkRecipe || !foodRecipe) {
+       return;
+     }
+  
+     userDrinkChoice.textContent = drinkRecipe;
+     userMealChoice.textContent = foodRecipe;
+   }
+  
+   mealBtnEl.addEventListener("click", function(event) {
+     event.preventDefault();
+  
+     var foodRecipe = document.getElementById("meal-recipe-card").value;
+  
+     if (foodRecipe === "") {
+           displayMessage("error", "Meal choice cannot be blank");
+     } else {
+       displayMessage("success", "Registered successfully");
+  
+       
+       localStorage.setItem("meal", foodRecipe);
+       renderLastChoice();
+     }
+   });
+
+   chooseBtnEl.addEventListener("click", function(event) {
+    event.preventDefault();
+ 
+    var drinkRecipe = document.getElementById("recipe-card").value;
+ 
+    if (drinkRecipe === "") {
+      displayMessage("error", "Drink choice cannot be blank");
+    }  else {
+      displayMessage("success", "Registered successfully");
+ 
+      localStorage.setItem("drink", drinkRecipe);
+
+      renderLastChoice();
+    }
+  });
+  
