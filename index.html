@@ -12,7 +12,7 @@
   <!--Background link-->
   <style>
     body {
-      background-image: url(https://kastinaandco.com/wp-content/uploads/2019/02/how-to-figure-out-food-costs-for-a-simple-event.jpg);
+      background-image: url(https://images.pexels.com/photos/3184192/pexels-photo-3184192.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
     }
   </style>
 
@@ -26,54 +26,17 @@
               <h1 class="title" >DINNER AND DRINKS</h1>
               <h2 class= "titleA" >A RANDOM COCKTAIL AND FOOD GENERATOR</h2>
             <div class="column right has-text-centered">
-              <h3 class="title is-4" style="color:black">How it works:</h3>
-              <p class="description" style="color:rgba(14, 14, 14, 0.61)">Click shuffle for a surprise drink and meal recipe!</p> 
-              
-            <form id="drink-form">
-                <div class="field"> 
-                  <label class="label">Select liquor:</label>
-                  <div class="control">
-                    <div id="liquor-options" class="select">
-                      <select id = "drop-down">
-                        <option value="">--Choose an option--</option>
-                        <option value="whisky">Whisky</option>
-                        <option value="vodka">Vodka</option>
-                        <option value="rum">Rum</option>
-                        <option value="tequila">Tequila</option>
-                        <option value="gin">Gin</option>
-                        <option value="brandy">Brandy</option>
-                      </select>
-                    </div>
-                  </div>
-                </div>
-            
-                </div>
+              <h3 class="work">How it works:</h3>
+              <p>Click shuffle for a surprise drink and meal recipe or pick a drink and click choose drink!</p> 
 
-
-                <br>
-                <button type="button" style="width:20%"
-                id="choose-btn" class="button">Choose Drink</button>
-                <br />
-                <button type="button" style="width:20%" id="drink-btn" class="button">Shuffle Drinks</button>
-                <br />        
-                <button type="button" style="width:20%" id="meal-btn" class="button">Shuffle Meals</button>
-                <br />
-                <small><b>Must be 21 and older to consume alcohol.</b></small>
-              </form>
-            </div>
-          </div>
-        </div>
-        <div class="column is-8 is-offset-2">
-          <br>
-        </div>
-      </div>
+          
     </section>
 
 <!-- Cocktail recipe card section    -->
 
 <section class="child">
   <div class="columns is-multiline">
-    <div class="column is-8 is-offset-2 register">
+    <div class="column is-8 is-offset-2">
       <div class="columns">
         <div class="column is-7">
           <figure class="image is-4by4">
@@ -81,8 +44,8 @@
           </figure>
       </div>
         <div id="recipe-card" class="column left">
-          <h4 class="heading post-category" style="color:white">Drink Ideas</h4>
-          <h5 id="cocktail-name" class="title is-3"></h5>
+          <h4 class="heading" style="color:rgb(8, 8, 8)">Drink Ideas</h4>
+          <h5 id="cocktail-name" class="title is-1"></h5>
           <p id="ingredients" class="in"></p>
           <br />
           <p id="instructions" class="in"></p>
@@ -90,6 +53,31 @@
           <button class="btn" id="new-cocktail" class="button is-block is-primary is-fullwidth is-medium">New cocktail</button>
           <br />
 
+          <br />
+          <button type="button" style="width:50%" id="drink-btn" class="button">Shuffle Drinks</button>
+           <br />   
+          <br>
+          <button type="button" style="width:50%"
+          id="choose-btn" class="button">Choose Drink</button>
+           
+           <form id="drink-form">
+            <div class="field"> 
+              <label class="label">Select liquor:</label>
+              <div class="control">
+                <div id="liquor-options" class="select">
+                  <select id = "drop-down">
+                    <option value="">--Choose an option--</option>
+                    <option value="whisky">Whisky</option>
+                    <option value="vodka">Vodka</option>
+                    <option value="rum">Rum</option>
+                    <option value="tequila">Tequila</option>
+                    <option value="gin">Gin</option>
+                    <option value="brandy">Brandy</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            </div>  
         </div>
       </div>
     </div>
@@ -97,23 +85,26 @@
 
   <!-- Meal recipe card section    -->
 
-  <section class="container">
+  <section class="child">
     <div class="columns is-multiline"></div>
-    <div class="column is-8 is-offset-3 register">
+    <div class="column is-8 is-offset-2">
       <div class="columns">
-        <div class="column is-5">
+        <div class="column is-7">
           <figure class="image is-4by4">
               <img src="" id="meal-image" alt="">
           </figure>
       </div>
         <div id="meal-recipe-card" class="column left">
-          <h6 class="heading post-category" style="color:white">Meal Ideas</h6>
-          <h7 id="meal-name" class="title is-5"></h7>
+          <h6 class="heading" style="color:rgb(8, 8, 8)">Meal Ideas</h6>
+          <h7 id="meal-name" class="title is-1"></h7>
           <p id="meal-ingredients" class="hidden"></p>
           <br />
           <p id="cooking-instructions" class="hidden"></p>
           <br />
           <button class="btn" id="new-meal" class="button is-block is-primary is-fullwidth is-medium">New Meal</button>
+          <br />
+          <br>
+          <button type="button" style="width:50%" id="meal-btn" class="button">Shuffle Meals</button>
           <br />
           <small><em></em></small>
 
@@ -123,6 +114,16 @@
   </section>
   
 
+   
+    <small><b>Must be 21 and older to consume alcohol.</b></small>
+  </form>
+</div>
+</div>
+</div>
+<div class="column is-8 is-offset-2">
+<br>
+</div>
+</div>
 <!-- // Footer section -->
   <div class="hero-foot">
     <div class="containera">
