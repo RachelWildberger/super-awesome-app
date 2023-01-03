@@ -21,11 +21,9 @@
     background-size: 100%;
     margin: 0%;
     padding: 0%;
-    border:10px black solid; 
-    
-
-    
+    border:10px white double;  
   }
+
   .field:not(:last-child) {
     margin-bottom: 1rem;
   }
@@ -91,19 +89,18 @@
  .title {
   font-size: 90px;
   color: rgb(7, 7, 7);
-  -webkit-text-stroke: 3px rgb(246, 111, 111);
+  -webkit-text-stroke: 3px rgb(242, 160, 160);
   font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   text-align: center;
   margin:-1in;
-
  }
 
  .titles {
   font-size: 0px;
   color: rgb(13, 13, 13);
-  -webkit-text-stroke: 2px rgb(246, 111, 111);
-  font-family:Impact, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-size: 30px;
+  -webkit-text-stroke: 2px rgb(242, 160, 160);
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 34px;
   text-align: center;
  }
 
@@ -146,11 +143,6 @@
   box-shadow: 0px 6px 0px #481d47, 0px 3px 15px rgba(0,0,0,.4), inset 0px 1px 0px rgba(255,255,255,.3), inset 0px 0px 3px rgba(255,255,255,.5);
 }
 
-.work {
-  margin: 10%;
-  padding: 10%;
-
-}
 .in {
   text-align: center;
   color: #101110;
@@ -179,7 +171,9 @@
   text-align: center;
   padding-top: 5%;
   margin: 0.5in;
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 65px;
+  -webkit-text-stroke: 2px rgb(242, 160, 160);
 
 }
 
@@ -188,6 +182,7 @@
 }
 
 p {
+  font-size: medium;
   text-align: center; 
   padding-top: 0.5%;
   margin: 1%;
@@ -198,7 +193,7 @@ p {
 }
 
 .container {
-  border-color: #000000;
-  border: 10px double;
+  border: 10px double white;
 }
+
 
