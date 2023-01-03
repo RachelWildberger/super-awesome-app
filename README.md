@@ -1,48 +1,25 @@
-#Name of project
-
-Drinks and Food Generator
-
+# Dinner and Drinks Application
 
 ## Description
 
-- What was your motivation?
-
-The motivation for this project was to create a simple website that people can visit when they have difficulty choosing what to drink or eat. One-click on the shuffle button provides the user with a random drink or food they can make. If they want a specific kind of drink, the user can pick an alcohol they want to make and click choose a drink. The generator will provide them with a drink based on what kind of alcohol they select.
-
-
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-- What problem does it solve?
+Motivation for the Dinner and Drinks was simple, create an easy to use food and drink app that inspires users with new recipes and easy to choose options. A one-click shuffle button provides the user with a random drink or food recipe. If they want a specific kind of drink, the user can pick a liquor type from the drop-down value and click choose a drink. The generator will provide them with a drink based on what type of alcohol they select.
 
 The main problem we wanted to solve was to give people more choices when making drinks or food. Instead of the same boring beverages and recipes, we wanted to provide the user with various options. That way, they can try new drinks and dishes enjoyed by themselves or with family and friends.
 
-- What did you learn?
 
-This project has made me realize how much a simple code can make or break a website. I was in charge of the HTML and CSS. On the surface, it seemed easy but gathering ideas from everyone and trying to figure out a design we all liked was challenging. It was worth it because it provided me with team experience, where I learned how vital feedback could be for group projects. (Nikhil)
 
-## Table of Contents (Optional)
+## Installation & Usage
 
-If your README is long, add a table of contents to make it easy for users to find what they need.
+To use Dinner and Drinks app visit https://rachelwildberger.github.io/super-awesome-app/, and read <em>How it Works</em>, if you want to choose your liquor type, click from the drop-down and click <em>Choose Drink</em>, if you want a random surprise cocktail click <em>Shuffle Drinks</em> for a random option.   
 
-- [Installation](#installation)
-- [Usage](#usage)
-- [Credits](#credits)
-- [License](#license)
 
-## Installation
-
-What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
-
-## Usage
-
-Provide instructions and examples for use. Include screenshots as needed.
-
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative file path, add it to your README using the following syntax:
-
-![alt text](assets/images/screenshot.png)
+![Dinner and Drinks Application](assets/images/dinneranddrinks-application.png)
+![Cocktail Recipe](assets/images/drink-recipe.png)
+![Meal Recipe](assets/images/meal-recipe.png)
 
 ## Credits
 
-List your collaborators, if any, with links to their GitHub profiles.
+Collaborators:
 
 Rachel Wildberger 
 https://github.com/RachelWildberger
@@ -60,5 +37,4 @@ https://github.com/NikhilPrince
 If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
 
 If you followed tutorials, include links to those here as well.
-
 
