@@ -1,119 +1,137 @@
 :root {
-    --brandColor: hsl(0, 0%, 0%);
-    /* --background: rgb(247, 247, 247); */
-    --textDark: black;
-    text-align: center;
-    font-size: large;
-    background-color: rgb(115, 58, 76);
-    -moz-transform: scale(0.9);
-    -webkit-transform: scale(0.9);
-    transform: scale(0.9);
-  }
-
-
-  body {
-    background: var(--background);
-    background-repeat:no-repeat;
-    color: var(--textDark);
-    background-size: cover;
-    height: 500px;
-    width: auto;
-    background-size: 100%;
-    margin: 0%;
-    padding: 0%;
-    border:10px black solid; 
-    
-
-    
-  }
-  .field:not(:last-child) {
-    margin-bottom: 1rem;
-  }
-
-  .register {
-    margin-top: 10rem;
-    /* background: white; */
-    border-radius: 10px;
- 
-  }
-  .left,
-  .right {
-    padding: 4.5rem;
-   
-  }
-  .left {
-    border-right: 5px solid var(--background);
-    
-  }
-  .left .title {
-    font-weight: 800;
-    letter-spacing: -2px;
-  }
-  .left .colored {
-    color: var(--brandColor);
-    font-weight: 500;
-    margin-top: 1rem !important;
-    letter-spacing: -1px;
-  }
-  .left p {
-    font-size: 1.15rem;
-    
-  }
-  .right .title {
-    font-weight: 800;
-    letter-spacing: -1px;
-   
-  }
-  .right .description {
-    margin-top: 1rem;
-    margin-bottom: 1rem !important;
-    color: var(--textLight);
-    font-size: 1.15rem;
-    color: silver;
-  }
-  .right small {
-    color: var(--textLight);
-    color: white;
-  }
-  input {
-    font-size: 1rem;
-  }
-  input:focus {
-    border-color: var(--brandColor) !important;
-    box-shadow: 0 0 0 1px var(--brandColor) !important;
-  }
-  .fab,
-  .fas {
-    color: var(--textLight);
-    margin-right: 1rem;
-  }
-
- .title {
-  font-size: 90px;
-  color: rgb(7, 7, 7);
-  -webkit-text-stroke: 3px rgb(246, 111, 111);
-  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  --brandColor: hsl(0, 0%, 0%);
+  /* --background: rgb(247, 247, 247); */
+  --textDark: black;
   text-align: center;
-  margin:-1in;
+  font-size: large;
+  /* background-color: rgb(255, 255, 255); */
+  -moz-transform: scale(0.9);
+  -webkit-transform: scale(0.9);
+  transform: scale(0.9);
+}
 
- }
 
- .titles {
+body {
+  background: var(--background);
+  background-repeat: no-repeat;
+  color: var(--textDark);
+  background-size: cover;
+  /* height: 500px; */
+  width: auto;
+  background-size: 100%;
+  margin: 0%;
+  padding: 0%;
+  /* border:10px black solid;  */
+
+}
+
+.hero-body {
+  background-image: url(https://i.shgcdn.com/3889bf5d-9000-4cbc-a021-cd6051095102/-/format/auto/-/preview/3000x3000/-/quality/lighter/);
+  height: 400px;
+  background-repeat: no-repeat;
+  background-color: #fff;
+  margin-top: -10px;
+  
+}
+
+.field:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.register {
+  margin-top: 10rem;
+  /* background: white; */
+  border-radius: 10px;
+
+}
+
+.left,
+.right {
+  padding: 4.5rem;
+
+}
+
+.left {
+  border-right: 5px solid var(--background);
+
+}
+
+.left .title {
+  font-weight: 800;
+
+}
+
+.left .colored {
+  color: var(--brandColor);
+  font-weight: 500;
+  margin-top: 1rem !important;
+
+}
+
+.left p {
+  font-size: 1.15rem;
+
+}
+
+.right .title {
+  font-weight: 800;
+  letter-spacing: -1px;
+
+}
+
+.right .description {
+  margin-top: 1rem;
+  margin-bottom: 1rem !important;
+  color: var(--textLight);
+  font-size: 1.15rem;
+  color: silver;
+}
+
+.right small {
+  color: var(--textLight);
+  color: white;
+}
+
+input {
+  font-size: 1rem;
+}
+
+input:focus {
+  border-color: var(--brandColor) !important;
+  box-shadow: 0 0 0 1px var(--brandColor) !important;
+}
+
+.fab,
+.fas {
+  color: var(--textLight);
+  margin-right: 1rem;
+}
+
+.title {
+  font-size: 90px;
+  -webkit-text-stroke: 1.5px rgb(136, 129, 129);
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-align: center;
+  margin: -1in;
+
+}
+
+.titles {
   font-size: 0px;
-  color: rgb(13, 13, 13);
-  -webkit-text-stroke: 2px rgb(246, 111, 111);
-  font-family:Impact, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: white;
+  -webkit-text-stroke: .5px  rgb(136, 129, 129);
+  font-family: Impact, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 30px;
   text-align: center;
- }
+}
 
- .btn {
+.btn {
   color: transparent;
   background-color: transparent;
-  border: transparent; 
- }
+  border: transparent;
+}
 
- .button {
+.button {
   display: inline-block;
   color: #fff;
   font-weight: bold;
@@ -124,33 +142,28 @@
   border: 1px solid #98942d;
   text-align: center;
   margin-bottom: 20px;
-  background-image: linear-gradient(bottom, rgb(13, 171, 97) 100%, rgb(13,171,97) 100%);
-  background-image: -o-linear-gradient(bottom, rgb(73,132,180) 0%, rgb(97,155,203) 100%);
-  background-image: -moz-linear-gradient(bottom, rgb(73,132,180) 0%, rgb(97,155,203) 100%);
-  background-image: -webkit-linear-gradient(bottom, rgb(73,132,180) 0%, rgb(97,155,203) 100%);
-  background-image: -ms-linear-gradient(bottom, rgb(73,132,180) 0%, rgb(97,155,203) 100%);
+  background-image: linear-gradient(bottom, rgb(13, 171, 97) 100%, rgb(13, 171, 97) 100%);
+  background-image: -o-linear-gradient(bottom, rgb(73, 132, 180) 0%, rgb(97, 155, 203) 100%);
+  background-image: -moz-linear-gradient(bottom, rgb(73, 132, 180) 0%, rgb(97, 155, 203) 100%);
+  background-image: -webkit-linear-gradient(bottom, rgb(73, 132, 180) 0%, rgb(97, 155, 203) 100%);
+  background-image: -ms-linear-gradient(bottom, rgb(73, 132, 180) 0%, rgb(97, 155, 203) 100%);
 
-  background-image: -webkit-gradient(
-      linear,
+  background-image: 
+  -webkit-gradient(linear,
       left bottom,
       left top,
       color-stop(0, rgb(121, 10, 65)),
-      color-stop(1, rgb(226, 148, 79))
-  );
+      color-stop(1, rgb(226, 148, 79)));
   -webkit-border-radius: 1px;
   -moz-border-radius: 5px;
   border-radius: 1px;
-  text-shadow: 0px -1px 0px rgba(0,0,0,.5);
-  -webkit-box-shadow: 0px 6px 0px #2b638f, 0px 3px 15px rgba(219, 13, 13, 0.4), inset 0px 1px 0px rgba(255,255,255,.3), inset 0px 0px 3px rgba(255,255,255,.5);
-  -moz-box-shadow: 0px 6px 0px #b71a92, 0px 3px 15px rgba(0,0,0,.4), inset 0px 1px 0px rgba(255,255,255,.3), inset 0px 0px 3px rgba(255,255,255,.5);
-  box-shadow: 0px 6px 0px #481d47, 0px 3px 15px rgba(0,0,0,.4), inset 0px 1px 0px rgba(255,255,255,.3), inset 0px 0px 3px rgba(255,255,255,.5);
+  text-shadow: 0px -1px 0px rgba(194, 190, 190, 0.5);
+  -webkit-box-shadow: 0px 6px 0px #2b638f, 0px 3px 15px rgba(219, 13, 13, 0.4), inset 0px 1px 0px rgba(255, 255, 255, .3), inset 0px 0px 3px rgba(255, 255, 255, .5);
+  -moz-box-shadow: 0px 6px 0px #b71a92, 0px 3px 15px rgba(0, 0, 0, .4), inset 0px 1px 0px rgba(255, 255, 255, .3), inset 0px 0px 3px rgba(255, 255, 255, .5);
+  box-shadow: 0px 6px 0px #481d47, 0px 3px 15px rgba(0, 0, 0, .4), inset 0px 1px 0px rgba(255, 255, 255, .3), inset 0px 0px 3px rgba(255, 255, 255, .5);
 }
 
-.work {
-  margin: 10%;
-  padding: 10%;
 
-}
 .in {
   text-align: center;
   color: #101110;
@@ -165,21 +178,19 @@
 .image {
   position: relative;
   bottom: -17%;
-  border: solid rgb(121, 18, 14);
   outline: none;
+  size: 100%;
 }
 
 .select {
   text-align: center;
-  ;
 }
 
 .work {
   color: #101110;
   text-align: center;
-  padding-top: 5%;
   margin: 0.5in;
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
 }
 
@@ -188,7 +199,7 @@
 }
 
 p {
-  text-align: center; 
+  text-align: center;
   padding-top: 0.5%;
   margin: 1%;
 }
@@ -197,8 +208,7 @@ p {
   color: #101110;
 }
 
-.container {
+.body-container {
   border-color: #000000;
   border: 10px double;
 }
-

@@ -10,37 +10,37 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
   </head>
+
   <body>
 
-  <!--Background link-->
-  <style>
-    body {
-      background-image: url(https://i.shgcdn.com/3889bf5d-9000-4cbc-a021-cd6051095102/-/format/auto/-/preview/3000x3000/-/quality/lighter/); 
-      
-    }
-  </style>
+  <!--Hero-->
+  <section class="hero is-info is-large">
+    <div class="hero-body">
+        <div class="container has-text-centered">
+            <h1 class="title">DINNER AND DRINKS</h1>
+            <h2 class= "titles" >A RANDOM COCKTAIL AND FOOD GENERATOR</h2>
+        </div>
+    </div>
+</section>
 
-  </style>
 <!-- Intro & selection section    -->
     <section class="main">
-      <div class="columns is-multiline">
-        <div class="column is-8 is-offset-2 register">
           <div class="columns">
             <div class="column left">
-              <h1 class="title" >DINNER AND DRINKS</h1>
-              <h2 class= "titles" >A RANDOM COCKTAIL AND FOOD GENERATOR</h2>
-            <div class="column right has-text-centered">
+            <div class="column has-text-centered">
               <h3 class="work" style="font-size:3rem">How it works:</h3>
-              <p>Click shuffle for a surprise drink and meal recipe or pick a drink and click choose drink!</p>    
+              <p>Welcome to Dinner and Drinks! A random cocktail and dinner generator to help you choose what to drink and what to eat for dinner!</p> 
+              <p>For a cocktail, either select a liquor type and click <em>Choose Drink</em>, or for a random cocktail option click <em>shuffle Drink.</em></p> 
+              <p>If you would like to pair your cocktail with a meal recipe click <em>Shuffle Meals</em> for a random meal option.</p>   
     </section>
 
 <!-- Cocktail recipe card section    -->
 
-<section class="container">
+<section class="body-container">
   <div class="columns is-multiline">
     <div class="column is-8 is-offset-2">
       <div class="columns">
-        <div class="column is-4">
+        <div class="column">
           <figure class="image is-4by4">
               <img src="" id="image" alt="">
           </figure>
@@ -79,7 +79,7 @@
           <br />
           <button type="button" id="drink-btn" class="button">Shuffle Drinks</button>
            <br />  
-            
+           <em><small><b>Must be 21 and older to consume alcohol.</b></em></small>  
             </div>  
         </div>
       </div>
@@ -92,7 +92,7 @@
     <div class="columns is-multiline"></div>
     <div class="column is-8 is-offset-2">
       <div class="columns">
-        <div class="column is-4">
+        <div class="column">
           <figure class="image is-4by4">
               <img src="" id="meal-image" alt="">
           </figure>
@@ -114,7 +114,6 @@
       </div>
     </div>
   </div>
-    <small><b>Must be 21 and older to consume alcohol.</b></small>
 </div>
 
 

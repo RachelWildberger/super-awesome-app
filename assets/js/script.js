@@ -35,7 +35,7 @@ var getChooseCocktail = function () {
         .catch(function (error) {
 
             console.log(error);
-            alert('Unable to choose a cocktail.');
+            alert('Please choose a liquor type from the drop-down menu.');
         });
 };
 
