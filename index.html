@@ -1,120 +1,121 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Dinner and a Drink</title>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/15181efa86.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
-  </head>
 
-  <body>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dinner and a Drink</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/15181efa86.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+</head>
+
+<body>
 
   <!--Hero-->
   <section class="hero is-info is-large">
     <div class="hero-body">
-        <div class="container has-text-centered">
-            <h1 class="title">DINNER AND DRINKS</h1>
-            <h2 class= "titles" >A RANDOM COCKTAIL AND FOOD GENERATOR</h2>
-        </div>
-    </div>
-</section>
-
-<!-- Intro & selection section    -->
-    <section class="main">
-          <div class="columns">
-            <div class="column left">
-            <div class="column has-text-centered">
-              <h3 class="work" style="font-size:3rem">How it works:</h3>
-              <p>Welcome to Dinner and Drinks! A random cocktail and dinner generator to help you choose what to drink and what to eat for dinner!</p> 
-              <p>For a cocktail, either select a liquor type and click <em>Choose Drink</em>, or for a random cocktail option click <em>shuffle Drink.</em></p> 
-              <p>If you would like to pair your cocktail with a meal recipe click <em>Shuffle Meals</em> for a random meal option.</p>   
-    </section>
-
-<!-- Cocktail recipe card section    -->
-
-<section class="body-container">
-  <div class="columns is-multiline">
-    <div class="column is-8 is-offset-2">
-      <div class="columns">
-        <div class="column">
-          <figure class="image is-4by4">
-              <img src="" id="image" alt="">
-          </figure>
+      <div class="container has-text-centered">
+        <h1 class="title">DINNER AND DRINKS</h1>
+        <h2 class="titles">A RANDOM COCKTAIL AND FOOD GENERATOR</h2>
       </div>
-        <div id="recipe-card" class="column left">
-          <h5 id="cocktail-name" class="title is-1 mt-2"></h5>
-          <p id="ingredients" class="in"></p>
-          <br />
-          <p id="instructions" class="in"></p>
-          <br />
-          <button class="btn" id="new-cocktail" class="button is-block is-primary is-fullwidth is-medium">New cocktail</button>
-          <br />
+    </div>
+  </section>
 
-          <form id="drink-form">
-            <div class="field"> 
-              <label class="label">Select liquor:</label>
-              <div class="control">
-                <div id="liquor-options" class="select">
-                  <select id = "drop-down">
-                    <option value="">--Choose an option--</option>
-                    <option value="whisky">Whisky</option>
-                    <option value="vodka">Vodka</option>
-                    <option value="rum">Rum</option>
-                    <option value="tequila">Tequila</option>
-                    <option value="gin">Gin</option>
-                    <option value="brandy">Brandy</option>
-                  </select>
+  <!-- Intro & selection section    -->
+  <section class="main">
+    <div class="columns">
+      <div class="column left">
+        <div class="column has-text-centered">
+          <h3 class="work" style="font-size:3rem">How it works:</h3>
+          <p>Welcome to Dinner and Drinks! A random cocktail and dinner generator to help you choose what to drink and
+            what to eat for dinner!</p>
+          <p>For a cocktail, either select a liquor type and click <em>Choose Drink</em>, or for a random cocktail
+            option click <em>shuffle Drink.</em></p>
+          <p>If you would like to pair your cocktail with a meal recipe click <em>Shuffle Meals</em> for a random meal
+            option.</p>
+  </section>
+
+  <!-- Cocktail recipe card section    -->
+
+  <section class="body-container">
+    <div class="columns is-multiline">
+      <div class="column is-8 is-offset-2">
+        <div class="columns">
+          <div class="column">
+            <figure class="image is-4by4">
+              <img src="" id="image" alt="">
+            </figure>
+          </div>
+          <div id="recipe-card" class="column left">
+            <h5 id="cocktail-name" class="title is-1 mt-2"></h5>
+            <p id="ingredients" class="in"></p>
+            <br />
+            <p id="instructions" class="in"></p>
+
+            <form id="drink-form">
+              <div class="field">
+                <label class="label">Select liquor:</label>
+                <div class="control">
+                  <div id="liquor-options" class="select">
+                    <select id="drop-down">
+                      <option value="">--Choose an option--</option>
+                      <option value="whisky">Whisky</option>
+                      <option value="vodka">Vodka</option>
+                      <option value="rum">Rum</option>
+                      <option value="tequila">Tequila</option>
+                      <option value="gin">Gin</option>
+                      <option value="brandy">Brandy</option>
+                    </select>
+                  </div>
                 </div>
               </div>
+              <br>
+              <button type="button" id="choose-btn" class="button">Choose Drink</button>
+              <br />
+
+              <br />
+              <button type="button" id="drink-btn" class="button">Shuffle Drinks</button>
+              <br />
+              <em><small><b>Must be 21 and older to consume alcohol.</b></em></small>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <!-- Meal recipe card section    -->
+    <div>
+      <div class="child">
+        <div class="columns is-multiline"></div>
+        <div class="column is-8 is-offset-2">
+          <div class="columns">
+            <div class="column">
+              <figure class="image is-4by4">
+                <img src="" id="meal-image" alt="">
+              </figure>
             </div>
-            <br>
-            <button type="button"
-            id="choose-btn" class="button">Choose Drink</button>
-            <br />
+            <div id="meal-recipe-card" class="column left">
+              <h7 id="meal-name" class="title is-2"></h7>
+              <p id="meal-ingredients" class="hidden"></p>
+              <br />
+              <p id="cooking-instructions" class="hidden"></p>
+              <br />
+              <button class="btn" id="new-meal" class="button is-block is-primary is-fullwidth is-medium">New
+                Meal</button>
+              <br />
+              <br>
+              <button type="button" id="meal-btn" class="button">Shuffle Meals</button>
+              <br />
+              <small><em></em></small>
 
-          <br />
-          <button type="button" id="drink-btn" class="button">Shuffle Drinks</button>
-           <br />  
-           <em><small><b>Must be 21 and older to consume alcohol.</b></em></small>  
-            </div>  
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-
-  <!-- Meal recipe card section    -->
-<div>
-  <div class="child">
-    <div class="columns is-multiline"></div>
-    <div class="column is-8 is-offset-2">
-      <div class="columns">
-        <div class="column">
-          <figure class="image is-4by4">
-              <img src="" id="meal-image" alt="">
-          </figure>
-      </div>
-        <div id="meal-recipe-card" class="column left">
-          <h7 id="meal-name" class="title is-2"></h7>
-          <p id="meal-ingredients" class="hidden"></p>
-          <br />
-          <p id="cooking-instructions" class="hidden"></p>
-          <br />
-          <button class="btn" id="new-meal" class="button is-block is-primary is-fullwidth is-medium">New Meal</button>
-          <br />
-          <br>
-          <button type="button" id="meal-btn" class="button">Shuffle Meals</button>
-          <br />
-          <small><em></em></small>
-
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 
 
 
@@ -122,13 +123,13 @@
 </body>
 <div class="hero-foot">
   <div class="containera">
-      <div class="tabs is-centered">
-          <ul>
-              <li><a>Project 1 by: the HTMLs</a></li>
-          </ul>
-      </div>
+    <div class="tabs is-centered">
+      <ul>
+        <li><a>Project 1 by: the HTMLs</a></li>
+      </ul>
+    </div>
   </div>
 
-<script src="./assets/js/script.js"></script>
+  <script src="./assets/js/script.js"></script>
 
 </html>
