@@ -17,6 +17,16 @@ To use Dinner and Drinks app visit https://rachelwildberger.github.io/super-awes
 ![Cocktail Recipe](assets/images/drink-recipe.png)
 ![Meal Recipe](assets/images/meal-recipe.png)
 
+## Technologies Used 
+
+https://www.themealdb.com/
+
+https://www.thecocktaildb.com/
+
+https://github.com/BulmaTemplates/bulma-templates/blob/master/templates/register.html
+
+
+
 ## Credits
 
 Collaborators:
