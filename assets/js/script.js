@@ -3,11 +3,9 @@ var chooseBtnEl = document.getElementById("choose-btn");
 var mealBtnEl = document.getElementById("meal-btn");
 var recipeCardEl = document.getElementById("recipe-card");
 var newCocktailBtnEl = document.getElementById("new-cocktail");
-var newMealBtnEl = document.getElementById("new-meal");
 var liquorOptionsEl = document.getElementById("liquor-options");
 var formEl = document.getElementById("drink-form");
 var recipeDisplay = document.getElementById("recipe-container");
-
 
 // Display the Choose cocktail information
 var getChooseCocktail = function () {
@@ -20,7 +18,6 @@ var getChooseCocktail = function () {
         return response.json();
     })
     .then(function (response){
-        // console.log(response.drinks[0])
         return fetch("https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=" + response.drinks[0].idDrink)
     })
     .then(function (response){
@@ -57,7 +54,6 @@ var chooseCocktail = function (liquorType) {
 var getMeal = function (data) {
 
     var theMealUrl = `https://www.themealdb.com/api/json/v1/1/random.php`;
-    localStorage.setItem('links', JSON.stringify(theMealUrl));
 
     fetch(theMealUrl)
         .then(function (response) {
@@ -77,7 +73,6 @@ var getMeal = function (data) {
 var displayMeal = function (data) {
 
     var mealRecipe = data.meals[0];
-
     var mealIngredients = Object.entries(mealRecipe);
     var ingredients = [];
     var measurements = [];
@@ -107,9 +102,15 @@ var displayMeal = function (data) {
     }
     cookingInstructionsEl.textContent = `Cooking Instructions: ${cookingInstructions}`;
 
-    console.log(data);
+    // saving recipe into local storage
+    localStorage.setItem("meal-name", mealName); 
+    localStorage.setItem("meal-measurements", measurements); 
+    localStorage.setItem("meal-ingredients", ingredients);  
+    localStorage.setItem("meal-instructions", cookingInstructions);  
+    localStorage.setItem("meal-image", mealImageEl.src); 
 
 }
+
 
 //Display the cocktail information 
 var displayCocktail = function (data) {
@@ -117,7 +118,6 @@ var displayCocktail = function (data) {
     var recipe = data.drinks[0];
 
     var recipeIngredients = Object.entries(recipe);
-    // var ingredientsEl = document.getElementById("ingredients");
     var ingredients = [];
     var measurements = [];
 
@@ -147,11 +147,17 @@ var displayCocktail = function (data) {
         ingredientsEl.innerHTML += "<li>" + measurements[i] + " " + ingredients[i] + "</li>"; 
         
     }
-    instructionsEl.textContent = `Instructions: ${instructions}`;
+         instructionsEl.textContent = `Instructions: ${instructions}`;
 
-    console.log(data);
+    // saving recipe into local storage
+        localStorage.setItem("drink-name", name); 
+        localStorage.setItem("drink-measurements", measurements); 
+        localStorage.setItem("drink-ingredients", ingredients);  
+        localStorage.setItem("drink-instructions", instructions);  
+        localStorage.setItem("drink-image", imageEl.src);  
 
-}
+      }
+
 
 //Get data from random cocktail API
 var getCocktail = function (data) {
@@ -179,57 +185,5 @@ mealBtnEl.addEventListener("click", getMeal);
 cocktailBtnEl.addEventListener("click", getCocktail);
 // console.log(cocktailBtnEl);
 
-newCocktailBtnEl.addEventListener("click", getCocktail);
-// console.log(newCocktailBtnEl);
-
-newMealBtnEl.addEventListener("click", getMeal);
-// console.log(newMealBntE1);
-
 chooseBtnEl.addEventListener("click", getChooseCocktail);
 // console.log(chooseBtnEl);
-
-
- function renderLastChoice() {
-     var drinkRecipe = localStorage.getItem("recipe-card");
-     var foodRecipe = localStorage.getItem("meal-recipe-card");
-  
-     if (!drinkRecipe || !foodRecipe) {
-       return;
-     }
-  
-     userDrinkChoice.textContent = drinkRecipe;
-     userMealChoice.textContent = foodRecipe;
-   }
-  
-   mealBtnEl.addEventListener("click", function(event) {
-     event.preventDefault();
-  
-     var foodRecipe = document.getElementById("meal-recipe-card").value;
-  
-     if (foodRecipe === "") {
-           displayMessage("error", "Meal choice cannot be blank");
-     } else {
-       displayMessage("success", "Registered successfully");
-  
-       
-       localStorage.setItem("meal", foodRecipe);
-       renderLastChoice();
-     }
-   });
-
-   chooseBtnEl.addEventListener("click", function(event) {
-    event.preventDefault();
- 
-    var drinkRecipe = document.getElementById("recipe-card").value;
- 
-    if (drinkRecipe === "") {
-      displayMessage("error", "Drink choice cannot be blank");
-    }  else {
-      displayMessage("success", "Registered successfully");
- 
-      localStorage.setItem("drink", drinkRecipe);
-
-      renderLastChoice();
-    }
-  });
-  
