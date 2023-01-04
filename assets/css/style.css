@@ -14,9 +14,7 @@
 
 body {
   background: var(--background);
-  background-repeat: no-repeat;
   color: var(--textDark);
-  background-size: cover;
   /* height: 500px; */
   width: auto;
   background-size: 100%;
@@ -29,7 +27,7 @@ body {
 .hero-body {
   background-image: url(https://i.shgcdn.com/3889bf5d-9000-4cbc-a021-cd6051095102/-/format/auto/-/preview/3000x3000/-/quality/lighter/);
   height: 400px;
-  background-repeat: no-repeat;
+  background-size: cover;
   background-color: #fff;
   margin-top: -10px;
   
@@ -114,6 +112,7 @@ input:focus {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   text-align: center;
   margin: -1in;
+  padding-top: 2.1rem;
 
 }
 
